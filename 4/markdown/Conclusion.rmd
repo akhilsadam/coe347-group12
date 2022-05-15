@@ -1,7 +1,11 @@
 
+# Conclusion {-}
+Cavities, or windows, in a structure when combined with external flow conditions with high airspeeds, may put undue stress on the structure on which the window is located. intuitively, as reinforced by the simulations, a large window with a small wall thickness poses the least interferencewith the external flow conditions and would consequently equalize much more effectively than a small window with a large wall thickness. Although low airspeeds do not introduce catastrophic coditions for a structure, the equalization of conditions still introduces gradient flow conditions within the interior of the structure due to the zero-flow impermiablity of the structure itself.  
+
 # Appendix {-}  
 
 ## Mesh Images
+Below are the meshes for the various simulations that were conducted. The low Reynolds meshes varied both the width of the window and wall thickness to find patterns in flow behavior as an effect of those parameters. 
 
 ### Mesh Images for the Low Reynolds simulations (same order)  
 
@@ -24,6 +28,7 @@
 
 
 ### Mesh Images for the High Reynolds simulations (same order)  
+The high Reynolds number meshes were used to find effects of high speed freestream airflow on the interior conditions of the cavity. For purposes of conciseness, the geometry of the meshes remained constant without variances in wall thickness nor window width. 
 
 ![](../plots/run_3_1000_050_01/MESH2.jpg){width=80% height=40%} 
 ![](../plots/run_5_1000_050_01/MESH2.jpg){width=80% height=40%} 
