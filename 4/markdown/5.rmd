@@ -1,1 +1,22 @@
 # High Reynolds Number - Part 2  
+
+## Volumetric Flow Rate and Mixing
+
+- plots
+- generic argument / example for UAV and ..
+
+
+## Window Wall Solution Profiles
+
+- profiles for Left and Right
+
+### T = 1.47 (unsteady startup)
+
+### T = 60  (steady-state for large-scales of flow)
+
+### Maximum Strain Rate over Time
+
+
+## Cavity Midline Solution Profile
+
+- midline profiles

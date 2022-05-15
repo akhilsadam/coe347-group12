@@ -1,59 +1,149 @@
-# Low Reynolds Number  
+# High Reynolds Number Part 1
 
+Note again all values are nondimensionalized - all lengths are in terms of $L$, the cavity length, all speeds in terms of $U$, the initial flow speed, and all times in terms of $\frac{L}{U}$.  
 
-## General Solution Form
+The pressure is in terms of $\frac{p}{\rho U^2}$.  
 
-- show basic solution images here
+## General Solution Form 
+
+Given the results from the Low Reynolds simulations, we will now consider only a window width of 0.5 and a wall thickness of 0.1. Images only for the refined mesh will be shown, for brevity.
+
+Plots will be shown in the following order: P, U, UX, UY, P-contour, U-contour, UX-contour, UY-contour, Streamlines for T=60.  
+
+### Re=1000  
+
+![](../plots/run_5_1000_050_01/P.jpg){width=40% height=20%}
+![](../plots/run_5_1000_050_01/U.jpg){width=40% height=20%}
+![](../plots/run_5_1000_050_01/U_X.jpg){width=40% height=20%}
+![](../plots/run_5_1000_050_01/U_Y.jpg){width=40% height=20%}
+![](../plots/run_5_1000_050_01/p_contour.jpg){width=40% height=20%}
+![](../plots/run_5_1000_050_01/U-Magnitude_contour.jpg){width=40% height=20%}
+![](../plots/run_5_1000_050_01/U-X_contour.jpg){width=40% height=20%}
+![](../plots/run_5_1000_050_01/U-Y_contour.jpg){width=40% height=20%}
+![](../plots/run_5_1000_050_01/U-Magnitude_streamlines.jpg){width=40% height=20%}  
+
+### Re=1000, U at T=1,2,6  
+
+![](../plots/run_5_1000_050_01/U-1.png){width=40% height=20%}
+![](../plots/run_5_1000_050_01/U-2.png){width=40% height=20%}
+![](../plots/run_5_1000_050_01/U-6.png){width=40% height=20%}  
+
+### Re=10000  
+
+![](../plots/run_5_10000_050_01/P.jpg){width=40% height=20%}
+![](../plots/run_5_10000_050_01/U.jpg){width=40% height=20%}
+![](../plots/run_5_10000_050_01/U_X.jpg){width=40% height=20%}
+![](../plots/run_5_10000_050_01/U_Y.jpg){width=40% height=20%}
+![](../plots/run_5_10000_050_01/p_contour.jpg){width=40% height=20%}
+![](../plots/run_5_10000_050_01/U-Magnitude_contour.jpg){width=40% height=20%}
+![](../plots/run_5_10000_050_01/U-X_contour.jpg){width=40% height=20%}
+![](../plots/run_5_10000_050_01/U-Y_contour.jpg){width=40% height=20%}
+![](../plots/run_5_10000_050_01/U-Magnitude_streamlines.jpg){width=40% height=20%}
+
+### Re=10000, U at T=1,2,6,30  
+
+![](../plots/run_5_10000_050_01/U-1.png){width=40% height=20%}
+![](../plots/run_5_10000_050_01/U-2.png){width=40% height=20%}
+![](../plots/run_5_10000_050_01/U-6.png){width=40% height=20%}
+![](../plots/run_5_10000_050_01/U-30.png){width=40% height=20%}  
 
 ## Vortice Positions
+
+Convergence can again easily be seen by looking at the centralized vortex position for both meshes, by differing geometry.
+
 ```{r, tidy=FALSE}
 data2 <- read.table(stringsAsFactors = FALSE, header = TRUE, sep="/", text =
 'meshfactor/Reynolds/window(a)/wall(w)/Vortex Center Location along Y
-5/10/0.50/01/0.605
-10/100/0.05/01/0.6425
-5/200/0.05/01/0.975
-10/50/0.05/01/0.6075
-5/50/0.05/01/0.965
-10/100/0.05/005/0.8575
-10/10/0.05/01/0.965
-10/200/0.50/01/0.8325
-5/50/0.50/01/0.685
-10/100/0.50/005/0.7425
-3/10000/0.50/01/0.641667
 3/1000/0.50/01/0.691667
-10/200/0.05/005/0.8675
-10/200/0.05/01/0.6875
-5/100/0.50/01/0.775
-5/50/0.05/005/0.835
-5/200/0.50/005/0.765
-5/200/0.05/005/0.855
-5/50/0.50/005/0.655
-10/10/0.50/005/0.5725
-10/10/0.50/01/0.6075
-10/100/0.50/01/0.7825
-10/50/005/005/0.8525
-5/10000/050/01/0.595
-5/10/050/005/0.565
-10/200/050/005/0.7725
-5/10/005/005/0.835
-5/200/050/01/0.825
 5/1000/050/01/0.705
-10/50/050/005/0.6625
-5/10/005/01/0.965
-10/50/050/01/0.6875
-10/10/005/005/0.8525
-'
+3/10000/0.50/01/0.641667
+5/10000/050/01/0.595'
 )
 knitr::kable((data2), booktabs = TRUE,
 caption = '')
+```
 
-## Window Wall Solution Profiles
+## Strouhal Number and Vortex Shedding
 
-- profiles for Left and Right
+We will now look at the frequency of the vortex shedding that occurs at the right window wall. In non-dimensional form (in terms of L/U), this is the Strouhal number.    
+Two probes are placed 0.025 to the left and right of the right vertical wall, 0.05 below the lower edge. We will denote the left probe as probe 0, and the right probe as probe 1.  
+Coarse meshes will be shown along with their refinements.  
+
+### Fast Fourier Transform (over all time)  
+
+From the images shown earlier, clearly there is no vortex shedding for the Re=1000 case, and it seems to stabilize quickly, so one might assume that the flow is steady.  
+Below we have only treated the Re=10000 case, since the Re=1000 case does not produce useful filtered output (which might seem to corroborate the above.  
+
+#### Re=10000, Probe 0
+
+![](../plots/run_3_10000_050_01/probe0.png){width=40% height=20%}
+![](../plots/run_3_10000_050_01/FFT0.png){width=40% height=20%}  
+![](../plots/run_5_10000_050_01/probe0.png){width=40% height=20%}
+![](../plots/run_5_10000_050_01/FFT0.png){width=40% height=20%}  
+
+#### Re=10000, Probe 1
+
+![](../plots/run_3_10000_050_01/probe1.png){width=40% height=20%}
+![](../plots/run_3_10000_050_01/FFT1.png){width=40% height=20%}  
+![](../plots/run_5_10000_050_01/probe1.png){width=40% height=20%}
+![](../plots/run_5_10000_050_01/FFT1.png){width=40% height=20%}  
+
+Note that the meshFactor of 3 fails to capture solution behavior (see the added oscillation).  
+
+### Short Time Fourier Transform (spectrogram to see time evolution)  
 
 
-## Cavity Midline Solution Profile
+#### Re=1000, Probe 0
 
-- midline profiles
+![](../plots/run_3_1000_050_01/probe_FFT0.png){width=40% height=20%}
+![](../plots/run_5_1000_050_01/probe_FFT0.png){width=40% height=20%}  
+
+#### Re=1000, Probe 1
+
+![](../plots/run_3_1000_050_01/probe_FFT1.png){width=40% height=20%}
+![](../plots/run_5_1000_050_01/probe_FFT1.png){width=40% height=20%}  
+
+Interestingly, the Re=1000 plot is not at 0 Strouhal number!
+So we can clearly see that the large-scale flow does not have any steady-state oscillation (which is what the previous FFT plots show), but the small-scales are unsteady, with a typical Strouhal number near 0.2, as seen in the later table.
+
+This is confirmed by the following:
+
+> For spheres in uniform flow in the Reynolds number range of 8×10^2 < Re < 2×10^5 there co-exist two values of the Strouhal number. The lower frequency is attributed to the large-scale instability of the wake, is independent of the Reynolds number Re and is approximately equal to 0.2. The higher-frequency Strouhal number is caused by small-scale instabilities from the separation of the shear layer.[@vort1; @vort2]  
+
+
+#### Re=10000, Probe 0
+
+![](../plots/run_3_10000_050_01/probe_FFT0.png){width=40% height=20%}
+![](../plots/run_5_10000_050_01/probe_FFT0.png){width=40% height=20%}  
+
+#### Re=10000, Probe 1
+
+![](../plots/run_3_10000_050_01/probe_FFT1.png){width=40% height=20%}
+![](../plots/run_5_10000_050_01/probe_FFT1.png){width=40% height=20%}  
+
+Continuing the former analysis, we see that the large scale instabilites are independent (since we get another Strouhal number for Re=10000 near 0.2 later in the flow).
+On the other hand, the small-scale instabilities are more prominent here, in the form of disturbances to the transform. We do not capture the other Strouhal number due to placement of the probes; we are interested in the large scale flow, so the other Strouhal number is not relavant for this paper.  
+
+Note again that the meshFactor of 3 is insufficient to capture the solution.
+
+#### Equilibrium Large-Scale Strouhal Values   
+
+Note that transient Strouhal numbers exist for Re=1000, and there are also small-scale Strouhal numbers for Re=1000, but those are neither relavant nor easily retrievable for this study.   
+
+```{r, tidy=FALSE}
+data2 <- read.table(stringsAsFactors = FALSE, header = TRUE, sep="/", text =
+'meshfactor/Reynolds/ProbeNumber/Strouhal
+3/10000/0/0.116472
+3/10000/1/0.166389
+5/10000/0/0.316139
+5/10000/1/0.149750'
+)
+knitr::kable((data2), booktabs = TRUE,
+caption = '')
+```
+
+Note the stark difference between left and right frequencies - the higher one may be the second Strouhal number mentioned in the previously cited articles.
+
+
 
 
