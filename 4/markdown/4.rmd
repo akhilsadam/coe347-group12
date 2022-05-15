@@ -1,5 +1,7 @@
 # High Reynolds Number Part 1
 
+Although low-speed Reynolds number flow is beneficial for primary flow analysis, the flow insuch a scenerio wold not prove catastrophic. Storms, be it hurricanes or tornados, contain flow of a high Reymolds number as is proportional to the velocity. In this section the flow behavior within a cavity of uniform wall thickness and window width will be analyzed with a high Reynolds number freestream flow outside of the cavity.
+
 Note again all values are nondimensionalized - all lengths are in terms of $L$, the cavity length, all speeds in terms of $U$, the initial flow speed, and all times in terms of $\frac{L}{U}$.  
 
 The pressure is in terms of $\frac{p}{\rho U^2}$.  
@@ -64,6 +66,7 @@ caption = '')
 ```
 
 ## Strouhal Number and Vortex Shedding
+The strouhal number is a dimensionless value that describes the behavior of flow oscillation. A very low Strouhal number denotes very few perturbations in the flow, whereas a very high Strouhal number denotes viscous behavior - while a moderate Strouhal number indicates vortex shedding.
 
 We will now look at the frequency of the vortex shedding that occurs at the right window wall. In non-dimensional form (in terms of L/U), this is the Strouhal number.    
 Two probes are placed 0.025 to the left and right of the right vertical wall, 0.05 below the lower edge. We will denote the left probe as probe 0, and the right probe as probe 1.  
