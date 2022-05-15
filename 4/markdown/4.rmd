@@ -24,11 +24,17 @@ Plots will be shown in the following order: P, U, UX, UY, P-contour, U-contour, 
 ![](../plots/run_5_1000_050_01/U-Y_contour.jpg){width=40% height=20%}
 ![](../plots/run_5_1000_050_01/U-Magnitude_streamlines.jpg){width=40% height=20%}  
 
+There is obvious vortex shedding at the right wall; one can see a tail extending into the cavity in nearly all the plots. Otherwise, this is quite similar to the low-Reynolds flow!  
+There is again a centralized vortice, an asymmetrical bend in the crossflow, and the hydraulic jump at the top of the right wall. The only difference is the tail, possibly a von Karman vortex street.
+To confirm that this is an unsteady flow, we look at the flow evolution over time.
+
 ### Re=1000, U at T=1,2,6  
 
 ![](../plots/run_5_1000_050_01/U-1.png){width=40% height=20%}
 ![](../plots/run_5_1000_050_01/U-2.png){width=40% height=20%}
 ![](../plots/run_5_1000_050_01/U-6.png){width=40% height=20%}  
+
+Clearly the flow is steady at large scales! So the vortex tail may not actually be a vortex street, since the unsteadiness is only at small scales. So Re=1000 is the above the lower-limit for the critical Reynolds number for large-scale flow, and below the critical Reynolds for small-scale flow. The overall critical Reynolds must then be between Re=200 and 1000.  
 
 ### Re=10000  
 
@@ -40,7 +46,9 @@ Plots will be shown in the following order: P, U, UX, UY, P-contour, U-contour, 
 ![](../plots/run_5_10000_050_01/U-Magnitude_contour.jpg){width=40% height=20%}
 ![](../plots/run_5_10000_050_01/U-X_contour.jpg){width=40% height=20%}
 ![](../plots/run_5_10000_050_01/U-Y_contour.jpg){width=40% height=20%}
-![](../plots/run_5_10000_050_01/U-Magnitude_streamlines.jpg){width=40% height=20%}
+![](../plots/run_5_10000_050_01/U-Magnitude_streamlines.jpg){width=40% height=20%}  
+
+A much more well-defined vortex street can be seen here, and the only differences are really a more asymmetric flow with a stronger vortex street. This street can now be called such, since it does shed large-scale vortices, as seen in the following images over time. An important note: the vortex street originates from the hydraulic jump and propagates backwards, much like disturbances and sometimes turbulence can be seen behind a tidal bore or river rapids.  
 
 ### Re=10000, U at T=1,2,6,30  
 
