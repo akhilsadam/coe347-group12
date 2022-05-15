@@ -2,7 +2,7 @@
 
 # Low Reynolds Number  
 
-Low Reynlds numbers are generally indicative of laminar airflow and low airspeeds. Although storm winds do not fall into this category, it is useful to examine the behavior of the airflow at low speeds to guage thegeneral effects of altering physical parameters such as wall thickness and window width. Windows come in a variety of sizes, as do wall thicknesses - so it is important t o understand the effests of altering the aforementioned geometries on the airflow.
+Low Reynlds numbers are generally indicative of laminar airflow and low airspeeds. Although storm winds do not fall into this category, it is useful to examine the behavior of the airflow at low speeds to guage thegeneral effects of altering physical parameters such as wall thickness and window width. Windows come in a variety of sizes, as do wall thicknesses - so it is important to understand the effests of altering the aforementioned geometries on the airflow.
 
 Note all values are nondimensionalized - all lengths are in terms of $L$, the cavity length, all speeds in terms of $U$, the initial flow speed, and all times in terms of $\frac{L}{U}$.  
 
