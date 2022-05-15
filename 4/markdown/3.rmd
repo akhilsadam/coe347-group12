@@ -2,7 +2,7 @@
 
 Note all values are nondimensionalized - all lengths are in terms of $L$, the cavity length, all speeds in terms of $U$, the initial flow speed, and all times in terms of $\frac{L}{U}$.  
 
-The pressure is in terms of $\frac{p}{\rho U^2}$.  
+The pressure is in terms of $\frac{p}{\rho U^2}$. All low-Reynolds simulations were run till T=6.  
 
 
 ## General Solution Form  
@@ -90,9 +90,41 @@ caption = '')
 
 ## Window Wall Solution Profiles
 
-- profiles for Left and Right
+Now consider the profiles along the left and right window walls; the vertical segments along the inside of the window.  
+
+### Re=10
+
+![](../plots/Profiles/B_p_10.jpg){width=100% height=40%}  
+![](../plots/Profiles/C_p_10.jpg){width=100% height=40%}  
+![](../plots/Profiles/B_u_10.jpg){width=100% height=40%}  
+![](../plots/Profiles/C_u_10.jpg){width=100% height=40%}  
+![](../plots/Profiles/B_v_10.jpg){width=100% height=40%}  
+![](../plots/Profiles/C_v_10.jpg){width=100% height=40%}  
+
+
+### Re=200
+
+![](../plots/Profiles/B_p_200.jpg){width=100% height=40%}  
+![](../plots/Profiles/C_p_200.jpg){width=100% height=40%}  
+![](../plots/Profiles/B_u_200.jpg){width=100% height=40%}  
+![](../plots/Profiles/C_u_200.jpg){width=100% height=40%}  
+![](../plots/Profiles/B_v_200.jpg){width=100% height=40%}  
+![](../plots/Profiles/C_v_200.jpg){width=100% height=40%}  
 
 
 ## Cavity Midline Solution Profile
 
-- midline profiles
+Now consider the profiles along the vertical midline down the cavity; from the middle of the window down to the back of the cavity.  
+
+### Re=10
+
+![](../plots/Profiles/E_p_10.jpg){width=100% height=40%}  
+![](../plots/Profiles/E_u_10.jpg){width=100% height=40%}  
+![](../plots/Profiles/E_v_10.jpg){width=100% height=40%}  
+
+
+### Re=200
+
+![](../plots/Profiles/E_p_200.jpg){width=100% height=40%}   
+![](../plots/Profiles/E_u_200.jpg){width=100% height=40%}  
+![](../plots/Profiles/E_v_200.jpg){width=100% height=40%}    

@@ -1,22 +1,78 @@
 # High Reynolds Number - Part 2  
 
-## Volumetric Flow Rate and Mixing
-
-- plots
-- generic argument / example for UAV and ..
-
-
 ## Window Wall Solution Profiles
 
-- profiles for Left and Right
+Now consider again the profiles along the left and right window walls; the vertical segments along the inside of the window.  
+This time we will consider the starting behavior of these profiles at high Re, in particular between T=1 and 2.  
 
-### T = 1.47 (unsteady startup)
+### T = 1.3 (unsteady startup)
 
-### T = 60  (steady-state for large-scales of flow)
+#### Re=1000
+
+![](../plots/Profiles/B_p_1000.jpg){width=100% height=40%}  
+![](../plots/Profiles/C_p_1000.jpg){width=100% height=40%}  
+![](../plots/Profiles/B_u_1000.jpg){width=100% height=40%}  
+![](../plots/Profiles/C_u_1000.jpg){width=100% height=40%}  
+![](../plots/Profiles/B_v_1000.jpg){width=100% height=40%}  
+![](../plots/Profiles/C_v_1000.jpg){width=100% height=40%}  
+
+
+#### Re=10000
+
+![](../plots/Profiles/B_p_10000.jpg){width=100% height=40%}  
+![](../plots/Profiles/C_p_10000.jpg){width=100% height=40%}  
+![](../plots/Profiles/B_u_10000.jpg){width=100% height=40%}  
+![](../plots/Profiles/C_u_10000.jpg){width=100% height=40%}  
+![](../plots/Profiles/B_v_10000.jpg){width=100% height=40%}  
+![](../plots/Profiles/C_v_10000.jpg){width=100% height=40%}  
+
 
 ### Maximum Strain Rate over Time
 
+TBD
 
 ## Cavity Midline Solution Profile
 
-- midline profiles
+Now again consider the profiles along the vertical midline down the cavity; from the middle of the window down to the back of the cavity.  
+Similarly, we will only consider T=1.3.
+
+#### Re=1000
+  
+![](../plots/Profiles/E_p_1000.jpg){width=100% height=40%}  
+![](../plots/Profiles/E_u_1000.jpg){width=100% height=40%}   
+![](../plots/Profiles/E_v_1000.jpg){width=100% height=40%}  
+
+
+#### Re=10000
+
+![](../plots/Profiles/E_p_10000.jpg){width=100% height=40%}  
+![](../plots/Profiles/E_u_10000.jpg){width=100% height=40%}  
+![](../plots/Profiles/E_v_10000.jpg){width=100% height=40%}  
+
+
+## Volumetric Flow Rate and Mixing
+
+To investigate inflow/outflow rates, we will consider integration of a profile across the internal window opening (profile D on the mesh diagram).  
+Note that the meshFactor of 3 fails for Re=10000 again.  
+
+![](../plots/run_3_1000_050_01/inflow.png){width=40% height=20%}
+![](../plots/run_5_1000_050_01/inflow.png){width=40% height=20%}
+![](../plots/run_3_10000_050_01/inflow.png){width=40% height=20%}
+![](../plots/run_5_10000_050_01/inflow.png){width=40% height=20%}  
+
+Looking at the net flow rate, clearly the cavity first pressurizes and then slowly depressurizes over time.   
+While this is happening, large amounts of fluid are still being cycled through the window - a huge amount in the first few timesteps (up to ~T=2),
+and then a somewhat large amount afterwards.  
+
+To visualize the scale, an example will be shown.
+
+For a $1m^2$ window and $90km/hr (56mph)$ wind, approximately $(25m/s)(1)(1)(0.08) = 2m^3 per second$ is cycled through in the first ~2 seconds!  
+Afterward, $0.25m^3/s$ is cycled in and out on average.  
+After the initial spike, there is a net decreasing outflow starting at $0.05m^3/s$ (using the Re=10000 plot).  
+Note this example is fairly realistic, since an EF0 tornado has slightly higher windspeed, and can be approximated as parallel streamline flow due to the large tornado radius.  
+While this example is not entirely accurate since the windspeed used can produce much higher Reynolds numbers in flow, the large-scale behavior is identical, as shown below.
+
+Note that the maximum cycle flow rate of 8% freestream is consistent between both Reynolds numbers. From the previous analysis on Strouhal numbers, we see that since the large-scale flows are fairly Reynolds-number-independent, it is possible that the volumetric flowrate has converged, and will remain the same for higher Reynolds numbers.  
+
+If that is the case, then the low-Reynolds analysis can be combined with a couple of measurements of high-Reynolds flow, and extrapolated out to actual cases, providing an extremely useful tool for flow estimation.  
+
