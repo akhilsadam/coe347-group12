@@ -83,7 +83,7 @@ Coarse meshes will be shown along with their refinements.
 ### Fast Fourier Transform (over all time)  
 
 From the images shown earlier, clearly there is no vortex shedding for the Re=1000 case, and it seems to stabilize quickly, so one might assume that the flow is steady.  
-Below we have only treated the Re=10000 case, since the Re=1000 case does not produce useful filtered output (which might seem to corroborate the above.  
+Below we have only treated the Re=10000 case, since the Re=1000 case does not produce useful filtered output (which might seem to corroborate the above.)  
 
 #### Re=10000, Probe 0
 
