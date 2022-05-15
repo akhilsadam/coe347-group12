@@ -132,6 +132,8 @@ def generateParameters(settings):
         return f"{int(factors[0])} {int(factors[1])}"
 
     eps = 0.0001
+    single = 1/float(20*key.f)
+    print("SINGLE:", single)
     params = \
         [
             {
@@ -157,8 +159,14 @@ def generateParameters(settings):
                 'B':
                 f"""\n\tstart   ({(key.m+eps):.6f} {(key.p-eps):.6f} 0);\n\tend     ({(key.m+eps):.6f} {(key.H+eps):.6f} 0);
                     """,
+                'M':
+                f"""\n\tstart   ({(key.m+eps+single):.6f} {(key.p-eps):.6f} 0);\n\tend     ({(key.m+eps+single):.6f} {(key.H+eps):.6f} 0);
+                    """,
                 'C':
                 f"""\n\tstart   ({(key.n-eps):.6f} {(key.p-eps):.6f} 0);\n\tend     ({(key.n-eps):.6f} {(key.H+eps):.6f} 0);
+                    """,
+                'N':
+                f"""\n\tstart   ({(key.n-eps-single):.6f} {(key.p-eps):.6f} 0);\n\tend     ({(key.n-eps-single):.6f} {(key.H+eps):.6f} 0);
                     """,
                 'D':
                 f"""\n\tstart   ({(key.m+eps):.6f} {(key.H+eps):.6f} 0);\n\tend     ({(key.n-eps):.6f} {(key.H+eps):.6f} 0);

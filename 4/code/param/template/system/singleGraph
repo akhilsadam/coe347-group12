@@ -42,11 +42,23 @@ sets
         axis    xyz;
         // B XXX
     }
+    B2
+    {
+        type    lineCell;
+        axis    xyz;
+        // M XXX
+    }
     C
     {
         type    lineCell;
         axis    xyz;
         // C XXX
+    }
+    C2
+    {
+        type    lineCell;
+        axis    xyz;
+        // N XXX
     }
     D
     {

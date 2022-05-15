@@ -1,3 +1,5 @@
+
+
 # Low Reynolds Number  
 
 Note all values are nondimensionalized - all lengths are in terms of $L$, the cavity length, all speeds in terms of $U$, the initial flow speed, and all times in terms of $\frac{L}{U}$.  
@@ -31,12 +33,20 @@ caption = '')
 ![](../plots/run_10_10_050_005/P.jpg){width=40% height=20%}
 ![](../plots/run_10_10_050_01/P.jpg){width=40% height=20%}  
 
+Note that all meshes have relatively even internal pressure, suggesting internal flow speeds are miniscule.
+Also, the more contact the cavity has with the crossflow, the lower the internal cavity pressure.
+Finally, consider the inlet. Note that the higher-pressure regions localize at the corners with larger windows, implying that the cavity acts as a sort of pressure sink.   
+
+
 ### Re=10, X-velocity
 
 ![](../plots/run_10_10_005_005/U_X.jpg){width=40% height=20%}
 ![](../plots/run_10_10_005_01/U_X.jpg){width=40% height=20%}
 ![](../plots/run_10_10_050_005/U_X.jpg){width=40% height=20%}
 ![](../plots/run_10_10_050_01/U_X.jpg){width=40% height=20%}  
+
+Similarly, the flow x-velocity dissipates across the window in amounts positively correlated with larger and thinner windows.
+No discernible cavity flow can be seen yet.  
 
 ### Re=10, Y-velocity
 
@@ -45,12 +55,56 @@ caption = '')
 ![](../plots/run_10_10_050_005/U_Y.jpg){width=40% height=20%}
 ![](../plots/run_10_10_050_01/U_Y.jpg){width=40% height=20%}  
 
+The same story can be seen in the y-velocities, but now there can be seen a cavity circulation (by the mild color differences inside the cavity).
+Note that the windows of 0.05 width produce really mild, near-complete cavity circulation, while the larger windows of 0.5 width produce much stronger but incomplete circulation
+(the corners are relatively unaffected).  
+
 ### Re=10, Streamlines
 
 ![](../plots/run_10_10_005_005/U-Magnitude_streamlines.jpg){width=40% height=20%}
 ![](../plots/run_10_10_005_01/U-Magnitude_streamlines.jpg){width=40% height=20%}
 ![](../plots/run_10_10_050_005/U-Magnitude_streamlines.jpg){width=40% height=20%}
 ![](../plots/run_10_10_050_01/U-Magnitude_streamlines.jpg){width=40% height=20%}  
+
+This is confirmed by the streamline plots. Note that there are between 1-3 transition vortices. At maximum, with the most neck-like window, there is a vortice the window opening, one in the window
+another in opening to the cavity. These three vortices connect the crossflow to the internal centralized vortex. When the window is broadened, these vortices all combine to form a single large transition vortice. Finally, note the center of the centralized vortice is very close to the center, and the crossflow bend is similarly symmetric, despite the flow directionality. This symmetry is probably due to the low Reynolds number of the flow.  
+
+### Re=200, Pressure
+
+![](../plots/run_10_10_005_005/P.jpg){width=40% height=20%}
+![](../plots/run_10_10_005_01/P.jpg){width=40% height=20%}
+![](../plots/run_10_10_050_005/P.jpg){width=40% height=20%}
+![](../plots/run_10_10_050_01/P.jpg){width=40% height=20%}  
+
+The pressure for Re=200 is very similar to that of Re=10 - the cavity acts like a simple pressure sink.
+  
+### Re=200, X-velocity
+
+![](../plots/run_10_200_005_005/U_X.jpg){width=40% height=20%}
+![](../plots/run_10_200_005_01/U_X.jpg){width=40% height=20%}
+![](../plots/run_10_200_050_005/U_X.jpg){width=40% height=20%}
+![](../plots/run_10_200_050_01/U_X.jpg){width=40% height=20%}  
+
+The only major difference is the asymmetry, which is probably due to the Reynolds number. Note that these solutions are also stable, and have been checked by flow visualization over time.  
+
+### Re=200, Y-velocity
+
+![](../plots/run_10_200_005_005/U_Y.jpg){width=40% height=20%}
+![](../plots/run_10_200_005_01/U_Y.jpg){width=40% height=20%}
+![](../plots/run_10_200_050_005/U_Y.jpg){width=40% height=20%}
+![](../plots/run_10_200_050_01/U_Y.jpg){width=40% height=20%}  
+ 
+Note that in addition to the asymmetry (same as seen in the x-velocity plots), there is an additional hydraulic jump right at the upper-right window corner, as the flow resumes high speed.  
+We will return to this in the high Reynolds section, as with increasing Re, this sort of jump can cause additional effects. We can also see the prominent third transition vortice clearly in the top-right plot. 
+
+### Re=200, Streamlines
+
+![](../plots/run_10_200_005_005/U-Magnitude_streamlines.jpg){width=40% height=20%}
+![](../plots/run_10_200_005_01/U-Magnitude_streamlines.jpg){width=40% height=20%}
+![](../plots/run_10_200_050_005/U-Magnitude_streamlines.jpg){width=40% height=20%}
+![](../plots/run_10_200_050_01/U-Magnitude_streamlines.jpg){width=40% height=20%}  
+
+Note the prominent third transition vortice. Otherwise, everything is as expected from Re=10 flow, except for the asymmetry.
 
 ## Vortice Positions  
 
