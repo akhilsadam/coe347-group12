@@ -2,8 +2,6 @@
 
 # Low Reynolds Number  
 
-Low Reynlds numbers are generally indicative of laminar airflow and low airspeeds. Although storm winds do not fall into this category, it is useful to examine the behavior of the airflow at low speeds to guage the general effects of altering physical parameters such as wall thickness and window width. Windows come in a variety of sizes, as do wall thicknesses - so it is important to understand the effests of altering the aforementioned geometries on the airflow.
-
 Note all values are nondimensionalized - all lengths are in terms of $L$, the cavity length, all speeds in terms of $U$, the initial flow speed, and all times in terms of $\frac{L}{U}$.  
 
 The pressure is in terms of $\frac{p}{\rho U^2}$. All low-Reynolds simulations were run till T=6.  
@@ -36,7 +34,7 @@ caption = '')
 ![](../plots/run_10_10_050_01/P.jpg){width=40% height=20%}  
 
 Note that all meshes have relatively even internal pressure, suggesting internal flow speeds are miniscule.
-Also, the more contact the cavity has with the crossflow, the lower the internal cavity pressure. This pressure differential works in attempt to equalize flow conditions, but due to the gradient induced by inequal flows, the interior pressure drops. 
+Also, the more contact the cavity has with the crossflow, the lower the internal cavity pressure.
 Finally, consider the inlet. Note that the higher-pressure regions localize at the corners with larger windows, implying that the cavity acts as a sort of pressure sink.   
 
 
@@ -47,7 +45,7 @@ Finally, consider the inlet. Note that the higher-pressure regions localize at t
 ![](../plots/run_10_10_050_005/U_X.jpg){width=40% height=20%}
 ![](../plots/run_10_10_050_01/U_X.jpg){width=40% height=20%}  
 
-Similarly, the flow x-velocity dissipates across the window in amounts positively correlated with larger and thinner windows. This is due to the reduced physical impedence of an impermiable zero-flow velocity structure that is the wall.
+Similarly, the flow x-velocity dissipates across the window in amounts positively correlated with larger and thinner windows.
 No discernible cavity flow can be seen yet.  
 
 ### Re=10, Y-velocity

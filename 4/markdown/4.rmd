@@ -1,6 +1,6 @@
 # High Reynolds Number Part 1
 
-Although low-speed Reynolds number flow is beneficial for primary flow analysis, the flow in such a scenerio wold not prove catastrophic. Storms, be it hurricanes or tornados, contain flow of a high Reynolds number as is proportional to the velocity. In this section the flow behavior within a cavity of uniform wall thickness and window width will be analyzed with a high Reynolds number freestream flow outside of the cavity.
+Although low-speed Reynolds number flow is beneficial for primary flow analysis, the flow insuch a scenerio wold not prove catastrophic. Storms, be it hurricanes or tornados, contain flow of a high Reymolds number as is proportional to the velocity. In this section the flow behavior within a cavity of uniform wall thickness and window width will be analyzed with a high Reynolds number freestream flow outside of the cavity.
 
 Note again all values are nondimensionalized - all lengths are in terms of $L$, the cavity length, all speeds in terms of $U$, the initial flow speed, and all times in terms of $\frac{L}{U}$.  
 
@@ -83,7 +83,7 @@ Coarse meshes will be shown along with their refinements.
 ### Fast Fourier Transform (over all time)  
 
 From the images shown earlier, clearly there is no vortex shedding for the Re=1000 case, and it seems to stabilize quickly, so one might assume that the flow is steady.  
-Below we have only treated the Re=10000 case, since the Re=1000 case does not produce useful filtered output (which might seem to corroborate the above.)  
+Below we have only treated the Re=10000 case, since the Re=1000 case does not produce useful filtered output (which might seem to corroborate the above.  
 
 #### Re=10000, Probe 0
 

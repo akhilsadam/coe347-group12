@@ -1,7 +1,6 @@
-\newpage
 # Mesh Assembly
 
-We assembled a 2D mesh template as below, with the following parameters, all lengths nondimensionalized in terms of dimension $L$:  
+We assemble a 2D mesh template as below, with the following parameters, all lengths nondimensionalized in terms of dimension $L$:  
 
 mutable: wall thickness $w$, window width $a$,   
 immutable: window location $b=0.5$, cavity height $H=1$, cavity width $L=1$, and free-stream width $2e=0.1$.  
