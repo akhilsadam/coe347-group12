@@ -63,9 +63,15 @@ Similarly, we will only consider T=1.3.
 #### Re=1000
   
 ![](../plots/Profiles/E_p_1000.jpg){width=100% height=40%}  
-![](../plots/Profiles/E_u_1000.jpg){width=100% height=40%}   
+
+These profiles are fairly self-explanatory: the cavity pressure is constant as in the initial conditions, and just near the top, where the high-speed free stream enters, there is a localized low-pressure region due to the main vortice edge (since it is near the right wall at that time). This can be confirmed by comparing with the low-Re simulations; there is only relatively constant pressure for the low-Re flow!
+ 
+![](../plots/Profiles/E_u_1000.jpg){width=100% height=40%}    
 ![](../plots/Profiles/E_v_1000.jpg){width=100% height=40%}  
 
+The X and Y-velocites corroborates. There is a much narrower range for the same features when compared to the low-Re simulations, and this is due to the vortice concentrating those features.  
+
+Note the amount of similarity from the low-Re plots!
 
 #### Re=10000
 
@@ -73,10 +79,11 @@ Similarly, we will only consider T=1.3.
 ![](../plots/Profiles/E_u_10000.jpg){width=100% height=40%}  
 ![](../plots/Profiles/E_v_10000.jpg){width=100% height=40%}  
 
+Comparing these to the Re=1000 plots, note that these plots are near identical, which implies that this large-scale flow measured along the cavity midline must correspond to the Strouhal number near 0.2, which is Reynolds-independent, explaining why the low-Reynold plots are so similar. Interestingly, despite the vortex velocity being reasonably larger than that of Re=1000, there is almost no difference in the plots!.
 
 ### Mean Strain Rate over Time
 
-To confirm that the maximum strain rate does occur at T=1.3, we plot the mean strain rate over time, for the left and right vertical window walls.  
+Now returning to strain rate, to confirm that the maximum strain rate does occur at T=1.3, we plot the mean strain rate over time, for the left and right vertical window walls.  
 
 #### Re=1000
 
