@@ -146,25 +146,41 @@ caption = '')
 
 Now consider the profiles along the left and right window walls; the vertical segments along the inside of the window.  
 
+To examine the effect of changing the mesh geometry (wall thickness and window size), mesh resolution (mesh resize factor), and the unsteadiness of the flow (measured by the Reynold’s Number) on the resulting velocity and pressure distributions in the computational domain, plots of the pressure, and the x and y components of velocity were developed against the coordinate position (in global reference frame) along three sample lines of interest at an elapsed time of 6 seconds corresponding to what qualitatively appeared to be fully developed flow. In particular, after running the simulations for both the steady and unsteady flow configurations, it was observed that the most interesting flow properties were displayed around the entrance to the cavity along the left and right wall surfaces as it was along these surfaces that resulting pressure and velocity distributions could be tied to theoretical behavior of surfaces exposed to high-impact winds from tornadoes and hurricanes, a main real-world application under consideration in the project. In addition to developing interest in studying the flow properties along the two wall surfaces, an objective of analyzing the flow properties along the midsection of the cavity from the cavity’s entrance to its bottom was also established with an intention of describing the flow penetration, and pressure gradient/depressurization of the cavity.  
+
 ### Re=10
 
 ![](../plots/Profiles/B_p_10.jpg){width=100% height=40%}  
 ![](../plots/Profiles/C_p_10.jpg){width=100% height=40%}  
+
+In examining the pressure vs position plot corresponding to the left wall surface flow for a Reynold’s Number of 10, it can be observed the pressure decreases with position from the bottom of the wall to the top for all flow fields independent of mesh geometry and refinement. This agrees with theoretical behavior at an elapsed time of 6 seconds as by this the flow is fully developed and in steady state meaning flow along the left wall is moving from bottom to top as the recirculation region in the cavity tends to move clockwise and thus most of the flow leaving the cavity leaves along the left wall, and thus the flow along the left wall surface moves from an area of high to low pressure as the plot reflects. In examining the bottom four curves of the plot, it is shown that improving the mesh refinement increased the pressure across the wall for both of the window size-wall thickness pairs. Additionally, it is shown that as the wall thickness was doubled while the window size was held constant, the pressure across the wall surface increased as expected with more throughflow. Lastly, the flow fields from the simulations with a window size rescaled to 1/10 of the original value possessed a much higher range of pressure [56, 59] compared to those from the simulations with a window size of 0.50 whose pressure range was approximately [33, 37] as expected given that a smaller window size theoretically facilitates a greater amount of fluid build-up/pressure as the flow is more restrained. Shifting gears to the plot of the pressure vs position along the right wall surface, a trend similar to that shown in the previous figure is provided, namely, the pressure along the wall for mesh geometry with a window size of 0.50 and a fixed wall thickness of either 0.05 or 0.1 was about 2/3 of the value along the wall for mesh geometry with a window size of 0.05. Here, however, the pressure decreases from a maximum value at the top of the right wall to a minimum value at the bottom reflecting a region with a high pressure at the top and low pressure at the bottom.  
+
 ![](../plots/Profiles/B_u_10.jpg){width=100% height=40%}  
 ![](../plots/Profiles/C_u_10.jpg){width=100% height=40%}  
+
+Shifting gears to the plots of the x component of the velocity across the left and right wall surfaces, it is shown that the curves are nearly identical whose features depict the velocity increasing slowly at first before finishing with a sharp increase in value at the top of the wall surfaces. This is reasonable given that the flow is at a maximum velocity at the inlet before before decaying in value as it moves further down the walls and ultimately, into the cavity. It is interesting to note that the simulations corresponding to the smallest window size and wall thickness produced velocity profiles that reached the smallest maximum value (~0.015) and decreased the most abruptly with position along the wall, whereas the simulations corresponding to the meshes with the largest window size and wall thickness decreased from the largest maximum value of the simulations (~0.047) very abruptly at the top of the wall before levelling off from around a vertical coordinate position of 1.06 downwards. 
+
 ![](../plots/Profiles/B_v_10.jpg){width=100% height=40%}  
 ![](../plots/Profiles/C_v_10.jpg){width=100% height=40%}  
 
+In examining the next two figures which depict the y-component of velocity as a function of position along the left and right wall surfaces, it is shown that they are a near mirror image of one another. Interestingly, the plot suggests that the y-component of the velocity in the flow fields corresponding to the simulations with a window size of 0.05 decrease from a slightly positive value to approximately zero from the top to the bottom of the wall whereas in the flow fields corresponding to the simulations with a window size of 0.5, the y-component of the velocity appears to increase relatively sharply from a large negative value at the top of the wall before levelling off at the bottom at a value that is slightly negative. The second figure depicts relationships that are suggestive of opposite features, namely, the y-component of the velocity from simulations with a window size of 0.50 dropped off sharply from a large positive value at the top of the right wall before levelling off at small and positive value at the bottom while values from the simulations with a window size of 0.05 increased gradually from a small and negative value at the top of the wall to approximately zero at the bottom. The reasoning for these reversed trends in the pairs of window sizes for both the x and y components of the velocity is likely attributed to the unsteadiness of the shed vortex and the effects from recirculation regions produced in the cavity whose properties impacted the flow along the surfaces. In general, it can be concluded that changing the wall size had a much larger effect on the pressure and velocity fields along the walls than changing the wall thickness.  
 
 ### Re=200
 
 ![](../plots/Profiles/B_p_200.jpg){width=100% height=40%}  
 ![](../plots/Profiles/C_p_200.jpg){width=100% height=40%}  
+
+Shifting gears to the simulations run under a Reynolds’ Number of 200, the flow fields remained steady, however, the shed vortex produced from the flow moving along the right wall and into the cavity split into four distinct vortices in the cavity that circulated clockwise over the cavity before ultimately being engulfed by the largest of the four and reaching steady state near the end of the simulations. As shown in the figures that depict the pressure fields across the two wall surfaces, the pressure again increased from a minimum value at the top of the left wall to a maximum value at the bottom, while the pressure decreased from a maximum value at the top of the right wall to a minimum value at the bottom. These high-low pressure regions are again consistent with the qualitative observations of the flow direction along the two surfaces. Interestingly, the pressure values for the Re = 200 simulations lie in the range [2.1, 3.4], nearly a factor of 20 smaller than what was recorded for the Re = 10 simulations.  
+
 ![](../plots/Profiles/B_u_200.jpg){width=100% height=40%}  
 ![](../plots/Profiles/C_u_200.jpg){width=100% height=40%}  
+
+Looking now at the figures depicting x-component of velocity across the wall surfaces for Re = 200, it is shown that the x-velocity of the flow fields all drop off from a maximum value at the top-most point of their domain to an approximately minimum value near the bottom of the wall for both the left and right wall surfaces and independent of the wall thickness, wall size, and refinement parameters. These relationships are very similar to what was discussed earlier for the Re = 10 simulations.  
+
 ![](../plots/Profiles/B_v_200.jpg){width=100% height=40%}  
 ![](../plots/Profiles/C_v_200.jpg){width=100% height=40%}  
 
+In looking at the plots of the y-component of the velocity along the left wall surface, it is shown that there is no distinct trend across the simulations run with a window size of 0.50, however, for the simulations run with a window size of 0.05, the values consistently decreased from a maximum value at the top of the wall to a minimum value at the bottom. Lastly, in observing the plot of the y-component of the velocity along the right wall surface, it is shown that for the simulations with a window size of 0.50, the values dropped from a maximum at the top of the wall to a minimum at the bottom whereas for the simulations with a window size of 0.05, the values marginally increased from a small and negative value to approximately zero as expected because for the simulations with a small window size of 0.05, very little flow penetrated the cavity along the right wall surface.  
 
 ## Cavity Midline Solution Profile
 
@@ -172,13 +188,29 @@ Now consider the profiles along the vertical midline down the cavity; from the m
 
 ### Re=10
 
-![](../plots/Profiles/E_p_10.jpg){width=100% height=40%}  
-![](../plots/Profiles/E_u_10.jpg){width=100% height=40%}  
+![](../plots/Profiles/E_p_10.jpg){width=100% height=40%}   
+
+In examining the figure depicting the pressure across the cavity midsection for a Re = 10, it is shown that the distributions are constant with position for each combination of window size and wall thickness. The reasoning for the pressure distribution being constant over the cavity midsection is because of the symmetry of the flow for low Reynolds’ Numbers and is a consequence of low pressure gradients across the low-speed centralized vortex that spans the midsection of the cavity such that there aren’t measurably lower pressure values in the vortex center. Additionally, it is observed that for a fixed pair of window size-wall thickness combination, the relationship between pressure and position along the cavity is independent of the mesh refinement as evidenced by four curves overlayed onto four plots. Moreover, the simulations with the largest window size produced flow fields with the smallest constant pressure ([36,38]) compared to [58,59] which is reasonable considering that window size was determined to be inversely proportional to fluid pressure both along the wall surfaces and in the cavity from qualitative observations of the flow field generated from post-simulation movies. 
+
+![](../plots/Profiles/E_u_10.jpg){width=100% height=40%}   
+
+In observing the figure depicting the x-component of the velocity across the cavity midsection, it is shown that the simulations with a window size of 0.50 and wall thickness of 0.05, and the simulations with a window size of 0.50 and a wall thickness of 0.1 produced very similar x-velocity profiles where the values decreased sharply from a maximum value at the top of the cavity to a minimum value (approximately zero) at the bottom as expected. It can then be concluded that this trend was independent of the wall thickness. Interestingly enough, the mesh refinement did not impact the solutions, and thus, a focus in future work would be to explore increasing the resolution of the mesh even further. Another interesting thing to note is that the x-component of the velocity for the simulations with a window size of 0.05 remained constant across the cavity midsection likely attributed to low throughflow conditions under this geometry.  
+
 ![](../plots/Profiles/E_v_10.jpg){width=100% height=40%}  
 
+Transitioning to the plot of the y-component of the velocity across the cavity midsection, it is shown, similar to the x-component of velocity, that for a window size of 0.05 the values remained constant at approximately zero over the entire midsection again attributed to low throughflow for this geometry. Conversely, the results for the simulations with a window size of 0.50 suggest that the y-component of velocity dropped off in magnitude from an appreciably large negative value at the cavity entrance to roughly zero which is reasonable considering the larger observed throughflow from the simulation movies and given that less and less of the flow penetrates the cavity as the flow moves vertically downwards due to recirculation regions/vortices that are moving clockwise around the cavity.  
 
 ### Re=200
 
 ![](../plots/Profiles/E_p_200.jpg){width=100% height=40%}   
-![](../plots/Profiles/E_u_200.jpg){width=100% height=40%}  
+
+Transitioning to steady flow under Re = 200, it is observed in the first figure that the pressure distribution again remained constant across the cavity for a fixed window size-wall thickness geometry with the pressure magnitudes about a factor of 20 smaller than what was shown in the respective Re = 10 solutions. This agrees with the authors' intuition and expectations.  
+
+![](../plots/Profiles/E_u_200.jpg){width=100% height=40%}   
+
+Shifting gears now to the plot depicting the x-component of the velocity along the cavity midsection, it is shown that the behavior is a near mirror image of the respective fields shown for the Re = 10 simulations, namely, the velocity drops off sharply from a maximum value at the top of the cavity’s midsection before levelling off to zero near the bottom for the meshes with a window size of 0.50 and for those with a window size of 0.05, it remains constant at approximately zero.  
+
 ![](../plots/Profiles/E_v_200.jpg){width=100% height=40%}    
+
+Interestingly, the figure above depicting the y-component of velocity across the midsection for a Re = 200 depicts relationships for the meshes with a window size of 0.50 that nearly resemble the solutions from Re = 10 reflected about the horizontal. In particular, the y-component of the velocity was shown to rising sharply from a large negative value at the top of the cavity before reaching a maximum positive value at a distance of roughly 0.2 into the cavity before dropping off again and levelling off to zero at the bottom of the cavity. This behavior is reasonable considering the effects of the centralized vortex in the cavity.  
+
